@@ -422,7 +422,7 @@ namespace lgfx
       do
       {
         len = (limit << 1) <= length ? limit : length;
-        if (limit <= 256) limit <<= 1;
+        //if (limit <= 256) limit <<= 1;
         auto dmabuf = _flip_buffer.getBuffer(len * bytes);
         param->fp_copy(dmabuf, 0, len, param);
         writeBytes(dmabuf, len * bytes, true, true);
